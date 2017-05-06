@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Task4" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Yp-kA-yRz">
+                                <rect key="frame" x="99" y="219" width="402" height="161"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="60" y="236" width="281" height="127"/>
+                                </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="qfD-cO-94u" appends="YES" id="cCF-lU-9pm"/>
+                                    <outletCollection property="gestureRecognizers" destination="oAQ-4R-dRD" appends="YES" id="NZc-w1-8wF"/>
+                                    <outletCollection property="gestureRecognizers" destination="688-cA-86k" appends="YES" id="c9B-kg-JZh"/>
+                                    <outletCollection property="gestureRecognizers" destination="E5f-MH-Ror" appends="YES" id="emm-V5-L7M"/>
+                                    <outletCollection property="gestureRecognizers" destination="m6h-Tf-32k" appends="YES" id="RTy-Fe-OtG"/>
+                                </connections>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="gestureIndicator" destination="9Yp-kA-yRz" id="9dw-sk-YJB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="qfD-cO-94u">
+                    <connections>
+                        <action selector="tap:" destination="vXZ-lx-hvc" id="aCY-V1-xPH"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="oAQ-4R-dRD">
+                    <connections>
+                        <action selector="longPress:" destination="vXZ-lx-hvc" id="aaE-tx-ITS"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pinchGestureRecognizer id="688-cA-86k">
+                    <connections>
+                        <action selector="pinch:" destination="vXZ-lx-hvc" id="sPx-zs-x0y"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="E5f-MH-Ror">
+                    <connections>
+                        <action selector="rotation:" destination="vXZ-lx-hvc" id="jHj-c3-MVN"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="m6h-Tf-32k">
+                    <connections>
+                        <action selector="swipe:" destination="vXZ-lx-hvc" id="F0P-0p-5OA"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="139.5" y="429"/>
+        </scene>
+    </scenes>
+</document>
