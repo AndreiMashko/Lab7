@@ -28,13 +28,7 @@
 
 @implementation ViewController
 - (IBAction)saveImg:(id)sender {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
-    
-    UIImage *imageToSave = [[self canvas] image];
-    NSData *binaryImageData = UIImagePNGRepresentation(imageToSave);
-    
-    [binaryImageData writeToFile:[basePath stringByAppendingPathComponent:[[self fileNameForSave] text]] atomically:YES];
+		UIImageWriteToSavedPhotosAlbum(_canvas.image, nil, nil, nil);
 }
 - (IBAction)setUp:(id)sender {
     [self setSizeStr:[[[self sizeStroke] text] floatValue]];
